@@ -4,8 +4,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-   background-image: url(bg.jpg );
+.body{
+   background-image: url(photo );
    background-size: auto;
    background-position: center;
 }
@@ -28,3 +28,5 @@ nav{
         width: 90%;
     }
 }
+
+
