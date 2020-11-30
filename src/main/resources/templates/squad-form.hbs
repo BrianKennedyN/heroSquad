@@ -1,0 +1,30 @@
+{{#partial "content"}}
+    <div class="jumbotron" id="my-squad">
+    <form action="/squad-created" method="post">
+        <h3></h3>
+        <div class="form-group">
+            <label for="name">Name of squad</label>
+            <input type="text" name="name" class="form-control" id="name" value="{{heroFound.squad}}">
+        </div>
+        <div class="form-group">
+            <label for="motive">Intentions</label>
+            <select name="motive" class="form-control" id="motive">
+                <option>Fighting domestic violence</option>
+                <option>Fighting that peddler selling to school kids</option>
+                <option>Fight the neighbour who calls cops on you when you have a party</option>
+                <option>Fighting corruption</option>
+                <option>Fighting the landlord that comes knocking when you have guests</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="size">Max size</label>
+            <input type="number" name="size" min="0" required class="form-control" id="size" placeholder="Enter max size ">
+        </div>
+        <div class="text-center">
+            <button class="btn btn-outline-success"><i class="fa fa-plus "></i>
+                Add to squad</button>
+        </div>
+    </form>
+    </div>
+{{/partial}}
+{{> layout.hbs}}
