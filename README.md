@@ -19,7 +19,7 @@ heroSquad is an app that allows you to recruit a well-balanced team of superhero
 * HBS
 
 ## Support and contact details
-If you come across any problems you can reach me at: amkamjoro@gmai.com
+If you come across any problems you can reach me at: amkamjoro@gmail.com
 
 ### License
 *This project is licensed under the terms of the MIT license.*
