@@ -1,0 +1,86 @@
+{{#partial "content"}}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5 class="text-center">Create hero</h5>
+                    <hr>
+                    <form action="/success" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="squad">Squad</label>
+                            <input type="text" name="squad" class="form-control" id="squad" placeholder="Enter squad name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" name="age" min="0" required class="form-control" id="age" placeholder="Enter age ">
+                        </div>
+                        <div class="form-group">
+                            <label for="powers">Power</label>
+                            <select name="powers" class="form-control" id="powers">
+                                <option>Fast</option>
+                                <option>Strong</option>
+                                <option>Smart</option>
+                                <option>Invisible</option>
+                                <option>Reads minds</option>
+                                <option>Flying</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="weakness">Weakness</label>
+                            <select name="weakness" class="form-control" id="weakness">
+                                <option>Dust</option>
+                                <option>Venom</option>
+                                <option>Cold</option>
+                                <option>Darkness</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-success"><i class="fa fa-plus "></i>
+                                Add hero</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 mt-2">
+            <h2 class="text-center">Team Members</h2>
+            <br>
+    {{#if heroes }}
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Hero Name</th>
+                        <th>Age</th>
+                        <th>Squad</th>
+                        <th>SuperPower</th>
+                        <th>Weakness</th>
+                    </tr>
+                    </thead>
+                    {{#each heroes }}
+                        <tbody>
+                        <tr>
+                            <td>{{ name }}</td>
+                            <td>{{ age }}</td>
+                            <td>  <a href="/heroes/{{id}}"><button class="btn btn-default">Add to squad</button></a></td>
+                            <td>{{ specialPowers}}</td>
+                            <td>{{ weakness }}</td>
+                        </tr>
+                        </tbody>
+
+                    {{/each}}
+                </table>
+            </div>
+      {{/if}}
+        </div>
+    </div>
+        </div>
+    </div>
+{{/partial}}
+
+{{>layout.hbs}}

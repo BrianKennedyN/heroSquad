@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .body{
-   background-image: url(photo );
+   background-image: url(bg.jpeg);
    background-size: auto;
    background-position: center;
 }
